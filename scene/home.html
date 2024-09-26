@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CraziCiti | Home</title>
+  <link rel="icon" href="../img/favi/favi.jpg">
+	<link rel="stylesheet" href="../styles/fly.css">
+	<link rel="stylesheet" href= "../styles/statbar.css">
+	<link rel="stylesheet" href="../styles/style.css">
+	<link rel="stylesheet" href="../styles/hitlist.css">
+	<link rel="stylesheet" href="../styles/map.css">
+</head>
+<!-- Body -->
+<body onload='updateTT()'>
+<!-- Player.js Spawns Stat Bar -->
+	<div id="stat-cont"></div>
+	<div class="logo">
+		<img class='lv'src='../img/currency/lv.jpg'/>
+		<div id='level'>1</div>
+		<div class="xp-bar-container">
+			<div class="xp-bar"></div>
+		</div>
+		<div id='xp'><span id='xpamt'>0</span> / <span id='xpreq'>15</span></div>
+	</div>
+<!-- Home Button Grid -->
+	<div class="bgrid" id='bgrid'>
+  	<button class="item" id='begbtn' onclick="beg()">Beg</button>
+		<button class="item" id="crimeButton">Crimes</button>
+		<button class="item" id="shopButton">Shop</button>
+		<button class="item" id="healButton">Heal</button>
+		<button class="item" id="missionButton">Hitlist</button>
+		<button class="item" onclick="location.href='arena.html'">Arena</button>
+		<button class="item" onclick="location.href='wh.html'" >Inventory</button>
+		<button class="item" id='apButton'>Airport</button>
+		<button class="item" onclick="location.href='profile.html'">Profile</button>
+<!-- Crime Menu -->
+		<div id="crimeMenu" class="hidden">
+			<button id="crimeBack" class="hidden backbtn">Back</button>
+      	<div id="selectCrime">
+        	<button id="scavage0" class='crimebtn'>Scavage</button>
+          <button id="hustle0"class='crimebtn'>Hustle</button>
+				  <button id="shoplift0"class='crimebtn'>Shoplift</button>
+          <button id="robbery0"class='crimebtn'>Robbery</button>
+      	</div>
+			<div id="crimeList" class="hidden"></div>
+		</div>
+<!-- Shop Menu -->
+	<div id="shopMenu" class="hidden">
+		<button id="shopBack" class="hidden backbtn">Back</button>
+        <div id="categoryMenu">
+            <button id="weaponsButton" class='shopbtn'>Weapons</button>
+            <button id="armoursButton"class='shopbtn'>Armor</button>
+				    <button id="toolsButton"class='shopbtn'>Tools</button>
+            <button id="consumablesButton"class='shopbtn'>Consumeables</button>
+        </div>
+				<div id="weaponsMenu" class='hidden'>
+            <button id="hgButton"class='shopbtn'>Handgun</button>
+            <button id="meleeButton"class='shopbtn'>Melee</button>
+			      <button id="arButton"class='shopbtn'>Assault Rifles</button>
+            <button id="shotgunButton"class='shopbtn'>Shotgun</button>
+						<button id="sniperButton"class='shopbtn'>Snipers</button>
+        </div>
+        <div id="itemList" class="hidden"></div>
+  </div>
+<!-- Heal Menu -->
+	<div id="healMenu" class="hidden">
+		<button id="healUpButton" class='healbtn'>Heal [$<span id='healcosttxt'></span>]</button>
+  </div>
+<!-- Mission Menu -->
+		<div id="missionPopup" class="popup">
+			<div class="popup-content">
+				<h1 id='mn'> <span id='missionname' class='innerBoxS'>Hitlist completed.</span></h1>
+				<p id='missiondesc' class='descr innerBoxS'></p>
+				<h3 id='missionreq' class='flex'><div id='rwrds'><span id='missioncashreward'></span><span id='missionxpreward'></span></div></h3>
+				<div class='btns' id='bttns'><button id="closeButton" class='backbtn'>Close</button></div>
+			</div>
+		</div>
+<!-- Flight Menu-->
+	<div id='apcontainer'>
+		<div id="apMenu" class="hidden">
+			<h1><span id='apTitle'>Crazi Citi Airlines</span></h1>
+		</div>
+		<div id="mapcontainer" class='hidden'>
+  	<svg id="node-map" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;" viewBox="0 0 75 75" preserveAspectRatio="xMidYMid meet"></svg>
+	</div>
+	</div>
+</div>
+<!-- Toast Containers -->
+	<div id="toast-container"></div>
+  <div id="level-container"></div>
+<!-- Background & Scripts -->
+	<div class="background"/>
+	<script src='../scripts/saves.js'></script>
+	<script src='../scripts/items.js'></script>
+	<script src='../scripts/city.js'></script>
+	<script src='../scripts/crimes.js'></script>
+  <script src="../scripts/home.js"></script>
+	<script src="../scripts/player.js"></script>
+  <script src="../scripts/inv.js"></script>
+	<script src="../scripts/fighter.js"></script>
+	<script src="../scripts/missions.js"></script>
+	<script src='../scripts/gym.js'></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+    <title>CraziCiti | Wharehouse</title>
+		<link rel="stylesheet" href="../styles/statbar.css">
+    <link rel="stylesheet" href="../styles/style.css">
+		<link rel="icon" href="../img/favi/wh.jpg">
+  </head>
+<!-- Body -->
+  <body onload="renderInventory()">
+<!-- Player.js spawns stat bar -->
+		<div id="stat-cont"></div>
+    <div class="logo">
+			<img class='lv'src='../img/currency/lv.jpg'/>
+			<div id='level'>1</div>
+			<div class="xp-bar-container">
+			<div class="xp-bar"></div></div>
+			<div id='xp'><span id='xpamt'>0</span> / <span id='xpreq'>15</span></div>
+		</div>
+<!-- Inv.js Spawns Inventory -->
+    <div id="inventory-container"></div>
+<!-- Toast Containers -->
+		<div id="toast-container"></div>
+    <div id="level-container"></div>
+<!-- Background & Scripts -->
+    <div class="invbackground"/>
+		<script src='../scripts/saves.js'></script>
+		<script src='../scripts/items.js'></script>
+		<script src='../scripts/city.js'></script>
+    <script src="../scripts/player.js"></script>
+    <script src="../scripts/inv.js"></script>
+	</body>
+</html>
