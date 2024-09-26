@@ -1,0 +1,124 @@
+#level,
+#xp {
+    color:#FFF;
+    font-weight: bold;
+}
+.stat,
+.money,
+.gold,
+.logo {
+	align-items: flex-start;
+  display: flex;
+}
+.energy,
+.courage,
+.morality,
+.health,
+.money,
+.gold {
+	border: 4px solid #000;
+	border-radius: 10px;
+	background-color: #666777;
+  padding: 5px;
+}
+.money {
+  background-color: #66AA77;
+	}
+.gold {
+	background-color: gold;
+}
+#money{
+	background: url(../img/currency/money.jpg) left center no-repeat;
+}
+#gold{
+	background: url(../img/currency/gold.jpg) left center no-repeat;
+}
+#gold,
+#money{
+	display: inline-block;
+  background-size: 28px;
+	padding-left: 28px;
+}
+.stat >:hover:not(.currency),
+.currency>:hover {
+	animation: rumble 1.75s infinite;
+  cursor: pointer;
+  opacity: .9;
+  font-weight: bold;
+}
+.e-bar-container,
+.c-bar-container,
+.m-bar-container,
+.h-bar-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #ccc;
+	height: 8px;
+  overflow: hidden;
+	position: relative;
+}
+.e-bar,
+.m-bar,
+.c-bar,
+.xp-bar,
+.hp-bar {
+	border-radius:10px;
+  height: 100%;
+	transition: width 1.5s;
+}
+.e-bar {
+  background-color: #1111AA;
+}
+.c-bar {
+  background-color: #11AA11;
+}
+.m-bar {
+  background-color: #FF5F1F;
+}
+.lv{
+  width:20px;
+	padding-right: 10px;
+}
+.xp-bar-container {
+	overflow: hidden;
+  border: 5px solid black;
+  border-radius:10px;
+  width: 50%;
+  background-color: #ccc;
+  height: 10px;
+	transition: 850ms ease-in;
+}
+.xp-bar {
+  width: 0%;
+  background-color: #4CAF50;
+}
+.hp-bar-container {
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: #ccc;
+    height: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.health-bar {
+  width: 300px;
+  height: 20px;
+}
+.hp-bar {
+  width: 100%;
+  background-color: #AF4C50;
+  transition: width 0.7s;
+	position: absolute;
+}
+@keyframes rumble{
+	 5% { rotate:-1deg; }
+	15% { rotate: 3deg; }
+	25% { rotate:-3deg; }
+	35% { rotate: 3deg; }
+	45% { rotate:-3deg; }
+	55% { rotate: 3deg; }
+	65% { rotate:-3deg; }
+	75% { rotate: 3deg; }
+	85% { rotate:-3deg; }
+	95% { rotate: 3deg; }
+}

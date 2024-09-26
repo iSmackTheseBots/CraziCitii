@@ -1,0 +1,119 @@
+*{
+    justify-content: center;
+    text-align: center;
+    font-family: Chalkduster, fantasy;
+    font-variant: small-caps;
+    margin: 0;
+    padding: 0;
+}
+.arenabackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/background/arenabackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(7px);
+  z-index: -10;
+}
+#toast-container, #level-container {
+    display: flex;
+}
+#fight-button{
+	background-color: #222;
+	border: 3px solid white;
+	border-radius: 10px;
+	text-align: center;
+	color:#fff;
+  font-family: Chalkduster, fantasy;
+  font-variant: small-caps;
+	padding: 7px;
+}
+#fight-button:hover{
+	cursor: pointer;
+}
+#chooseenemy{
+	  display: flex;
+}
+.knownEnemies{
+	width: 5%;
+	border: 3px solid #777;
+	border-radius: 10px;
+	background-color: #aaa;
+}
+.knownEnemies:hover{
+	cursor: pointer;
+	background-color: #777;
+	border: 3px solid #333
+	
+}
+#enemyNameInput{
+	border: 3px solid white;
+	border-radius:10px;
+	color:red;
+	font-weight:bold;
+	font-size:large;
+	background-color:#666777;
+	caret-color: transparent;
+}
+#enemyNameInput::placeholder {
+  color: #FF1111; /* Replace with your desired color code or name */
+}
+#enemybattle,
+#playerbattle{
+	display:flex;
+}
+#enemybattle img,
+#playerbattle img{
+	max-width:100px;
+}
+.toast {
+  background-color: #11111199;
+  display: flex;
+  justify-content: center;
+  color: #DDDDDD;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.fight-container {
+  display: flex;
+  align-items: center;
+}
+.fight-stats {
+  margin-right: 10%;
+	color: #fff;
+}
+.fight-container p:hover,
+.fight-container span:hover,
+.fight-container h2:hover{
+	cursor: pointer;
+}
+#player-stats p::after,
+#enemy-stats p::after {
+	content: "";
+	display: flex;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 740ms cubic-bezier(0, 0, 0.2, 1);;
+}
+#player-stats p:hover::after,
+#enemy-stats p:hover::after {
+	transform: scaleX(0.98);
+	transform-origin: left;
+}
+.battle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player-hp-bar, .enemy-hp-bar {
+  transition: width 0.7s;
+}

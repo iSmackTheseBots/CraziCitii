@@ -1,0 +1,30 @@
+#mapcontainer{
+  background-color: cadetblue;
+  width: -webkit-fill-available;
+	border: 5px solid black;
+	border-radius: 15px;
+}
+
+#apcontainer{
+	align-items: center;
+	display: flex;
+	position: fixed;
+  height: max-content;
+  top: 71%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  overflow-y: scroll;
+}
+}
+
+#controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
